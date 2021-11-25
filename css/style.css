@@ -1,0 +1,84 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    height: 400px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: cadetblue;
+}
+
+.img-container {
+    width: 80%;
+    height: 100%;
+    background-color: chocolate;
+}
+
+.img-slider {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: darkslateblue;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container .img-text {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+}
+
+.img-container .img-big, .img-slider .img  {
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-container .img-big {
+    height: 100%;
+}
+
+.img-slider .img {
+    height: 20%;
+}
+
+.img-slider {
+    position: relative;
+}
+
+.img-slider .fa-chevron-up, .img-slider .fa-chevron-down {
+    padding: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 1.2em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.img-slider .fa-chevron-down {
+    bottom: 10px;
+}
+
+.img-slider .fa-chevron-up {
+    top: 10px;
+}

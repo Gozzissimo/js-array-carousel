@@ -34,7 +34,7 @@ const items = [
     'img/03.jpg',
     'img/04.jpg',
     'img/05.jpg'
-];
+]
 
 const title = [
     'Svezia',
