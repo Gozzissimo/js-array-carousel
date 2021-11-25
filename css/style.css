@@ -30,7 +30,7 @@ html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: darkslateblue;
+    background-color: black;
 }
 
 .img-container {
@@ -56,6 +56,7 @@ html {
 
 .img-slider .img {
     height: 20%;
+    opacity: 0.5;
 }
 
 .img-slider {
@@ -83,7 +84,12 @@ html {
     top: 10px;
 }
 
-.active {
+.img-container img.active {
     display: block;
+}
+
+.img-slider .active {
+    opacity: unset;
+    border: 2px solid white;
 }
 

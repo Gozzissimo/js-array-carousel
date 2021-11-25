@@ -77,6 +77,25 @@ const downButton = document.querySelector('.img-slider .down')
 
 // mega calcolone per mettere le classi
 downButton.addEventListener('click', function () {
-    
 
+    // const imageActive = document.querySelector('.img-container .active');
+    // const titleActive = document.querySelector('.img-slider .img.active');
+
+    let classes = imageActive.classlist;
+
+    let last = false;
+
+    for (let i = 0; i < classes.length; i++) {
+        
+        if (classes[i] == 'last') {
+
+            last = true;
+        }
+    }
+
+    if (last == false) {
+        imageActive.classList.remove('active');
+        titleActive.classList.remove('active');
+        textctive.classList.remove('active');
+    }
 });
