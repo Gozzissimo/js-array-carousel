@@ -51,3 +51,32 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
+
+// contenitori per gli elementi da inserire
+const imgContainer = document.getElementsByClassName('img-container');
+const imgText = document.getElementsByClassName('img-text');
+
+
+// creazione ciclo per far girare immagini e testi
+for (let i = 0; i < items.length; i++) {
+
+    let image = `<img src="${items[i]}" alt="${items[i]}">`;
+    let imageTitle = `<h1>${title[i]}</h1>`;
+    let imageDesc = `<div>${text[i]}</div>`;
+
+    imgContainer.innerHTML += image;
+    imgText.innerHTML += imageTitle;
+    imgText.innerHTML += imageDesc;
+}
+
+
+// costanti bottoni
+const upButton = document.querySelector('.img-slider .up')
+const downButton = document.querySelector('.img-slider .down')
+
+
+// mega calcolone per mettere le classi
+downButton.addEventListener('click', function () {
+    
+
+});

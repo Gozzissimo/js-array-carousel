@@ -82,3 +82,8 @@ html {
 .img-slider .fa-chevron-up {
     top: 10px;
 }
+
+.active {
+    display: block;
+}
+
