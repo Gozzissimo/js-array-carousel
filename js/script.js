@@ -54,32 +54,50 @@ const text = [
 
 // contenitori per gli elementi da inserire
 const imgContainer = document.getElementsByClassName('img-container');
+const imgTitle = document.getElementsByClassName('img-title');
 const imgText = document.getElementsByClassName('img-text');
 
 
-// creazione ciclo per far girare immagini e testi
+// creazione ciclo for per far girare e inserire immagini titoli e testi
 for (let i = 0; i < items.length; i++) {
 
     let image = `<img src="${items[i]}" alt="${items[i]}">`;
     let imageTitle = `<h1>${title[i]}</h1>`;
-    let imageDesc = `<div>${text[i]}</div>`;
+    let imageText = `<div>${text[i]}</div>`;
 
     imgContainer.innerHTML += image;
-    imgText.innerHTML += imageTitle;
-    imgText.innerHTML += imageDesc;
+    imgTitle.innerHTML += imageTitle;
+    imgText.innerHTML += imageText;
 }
+
+// nodes
+const imagesDom = document.querySelectorAll('.img-container');
+const titlesDom = document.querySelectorAll('.img-desc .img-title');
+const textsDom = document.querySelectorAll('.img-desc .img-text');
+
+// aggiungo le classi primo e ultimo
+imagesDom[0].classList.add('first', 'active');
+imagesDom[imagesDom.length - 1].classList.add('last');
+
+titlesDom[0].classList.add('first', 'active');
+titlesDom[titlesDom.length - 1].classList.add('last');
+
+textsDom[0].classList.add('first', 'active');
+textsDom[textsDom.length - 1].classList.add('last');
+
 
 
 // costanti bottoni
-const upButton = document.querySelector('.img-slider .up')
-const downButton = document.querySelector('.img-slider .down')
+const upButton = document.querySelector('.img-slider .up');
+const downButton = document.querySelector('.img-slider .down');
 
 
-// mega calcolone per mettere le classi
+// mega calcolone per mettere le classi al click
 downButton.addEventListener('click', function () {
 
-    // const imageActive = document.querySelector('.img-container .active');
-    // const titleActive = document.querySelector('.img-slider .img.active');
+    const imageActive = document.querySelector('.img-container img.active');
+    const titleActive = document.querySelector('.img-desc .img-title.active');
+    const textActive = document.querySelector('.img-desc .img-text.active');
 
     let classes = imageActive.classlist;
 
@@ -93,9 +111,20 @@ downButton.addEventListener('click', function () {
         }
     }
 
+    // aggiunta e rimozione active
     if (last == false) {
         imageActive.classList.remove('active');
         titleActive.classList.remove('active');
-        textctive.classList.remove('active');
+        textActive.classList.remove('active');
+
+        const imgNext = imageActive.nextElementSibling;
+        const titleNext = titleActive.nextElementSibling;
+        const textNext = textActive.nextElementSibling;
+
+        imgNext.classList.add('active');
+        titleNext.classList.add('active');
+        textNext.classList.add('active');
+    } else {
+        // nextButton.classList.remove 'able';
     }
 });

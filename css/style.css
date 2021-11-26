@@ -23,6 +23,7 @@ html {
     width: 80%;
     height: 100%;
     background-color: chocolate;
+    position: relative;
 }
 
 .img-slider {
@@ -33,11 +34,7 @@ html {
     background-color: black;
 }
 
-.img-container {
-    position: relative;
-}
-
-.img-container .img-text {
+.img-container .img-desc {
     text-align: right;
     position: absolute;
     right: 20px;
@@ -45,18 +42,35 @@ html {
     color: white;
 }
 
-.img-container .img-big, .img-slider .img  {
+.img-desc .img-title.active {
+    display: block;
+}
+
+.img-desc .img-text.active {
+    display: block;
+}
+
+.img-container img {
+    height: 100%;
+    display: none;
     object-fit: cover;
     width: 100%;
 }
 
-.img-container .img-big {
-    height: 100%;
+.img-text img.active {
+    display: block;
 }
 
-.img-slider .img {
+.img-slider img {
     height: 20%;
     opacity: 0.5;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-slider img.active {
+    opacity: unset;
+    border: 2px solid white;
 }
 
 .img-slider {
@@ -84,12 +98,4 @@ html {
     top: 10px;
 }
 
-.img-container img.active {
-    display: block;
-}
-
-.img-slider .active {
-    opacity: unset;
-    border: 2px solid white;
-}
 
