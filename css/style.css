@@ -42,6 +42,13 @@ html {
     color: white;
 }
 
+.img-desc .img-title {
+    display: none;
+}
+
+.img-desc .img-text {
+    display: none;
+}
 .img-desc .img-title.active {
     display: block;
 }

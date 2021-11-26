@@ -27,7 +27,7 @@
 // 3. Al momento giusto(starà a voi capire quale) rispondete a questa domanda: “Quanti cicli servono ?”
 
 
-// array
+// arrays
 const items = [
     'img/01.jpg',
     'img/02.jpg',
